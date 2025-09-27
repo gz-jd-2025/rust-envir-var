@@ -1,0 +1,15 @@
+[package]
+name = "evncli"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+opt-level = "z"          # 优化为最小体积
+lto = true               # 启用 Link Time Optimization
+codegen-units = 1        # 更好优化
+panic = "abort"          # panic 时直接中止，不生成额外 unwind 代码
+strip = true             # 移除调试信息
+overflow-checks = false  # 可以进一步减少依赖生成冗余
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
