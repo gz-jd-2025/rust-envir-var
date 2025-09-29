@@ -30,7 +30,7 @@ $Url = "https://github.com/$Repo/releases/download/$LatestTag/$BinName-windows-$
 Write-Host "Downloading $Url ..."
 
 # 下载文件
-$OutFile = Join-Path $InstallDir $BinName
+$OutFile = Join-Path $InstallDir "$BinName.exe"
 Invoke-WebRequest -Uri $Url -OutFile $OutFile
 
 # ----------------------------
