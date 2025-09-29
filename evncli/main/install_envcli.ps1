@@ -5,8 +5,8 @@ $ErrorActionPreference = "Stop"
 # ----------------------------
 # 配置
 # ----------------------------
-$Repo = "gz-jd/rust-envir-var"
-$BinName = "envcli.exe"
+$Repo = "gz-jd-2025/rust-envir-var"
+$BinName = "envcli"
 $InstallDir = "$env:USERPROFILE\bin"  # 默认安装到用户目录 bin，可自定义
 
 # 创建目录（如果不存在）
